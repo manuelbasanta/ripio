@@ -3,23 +3,46 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-loader": "^8.0.4",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.2"
+    "react-scripts": "1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      ".*css$": "<rootDir>/src/stub.css",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/fileMock.js"
+    },
+    "automock": false,
+    "setupFiles": [
+      "./test/jest-setup.js"
+    ],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^23.6.0",
+    "jest-fetch-mock": "^2.1.0",
+    "react-test-renderer": "^16.7.0"
+  }
 }

@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+th {
+    text-align: left;
+    border-bottom:1pt solid #e0e0e0;
+}
+
+thead tr:nth-child(odd) {
+    background-color: transparent;
+}
+
+tr:nth-child(odd) {
+    background-color: #254661
+}
+
+tr {
+    height: 40px;
+}
+
+
