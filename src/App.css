@@ -28,6 +28,10 @@
     padding: 10px 0;
 }
 
+button {
+    border: none;
+}
+
 @media only screen and (max-width: 600px) {
     .app-wrapper {
         max-width: 90%;
